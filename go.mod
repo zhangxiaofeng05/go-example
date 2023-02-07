@@ -6,6 +6,7 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.1
 	github.com/gin-gonic/gin v1.8.2
 	github.com/golang-jwt/jwt/v4 v4.4.3
+	github.com/gorilla/websocket v1.5.0
 )
 
 require (

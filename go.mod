@@ -7,6 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.8.2
 	github.com/golang-jwt/jwt/v4 v4.4.3
 	github.com/gorilla/websocket v1.5.0
+	github.com/sony/gobreaker v0.5.0
 )
 
 require (

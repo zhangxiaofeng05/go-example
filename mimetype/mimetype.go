@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"encoding/csv"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 
 	"github.com/gabriel-vasile/mimetype"
@@ -33,7 +33,7 @@ func main() {
 	router := gin.Default()
 	// Set a lower memory limit for multipart forms (default is 32 MiB)
 	router.MaxMultipartMemory = 8 << 20 // 8 MiB
-	router.Static("/", "./public")
+	router.Static("/", "./testdata/public")
 	// 给前端使用的上传API：http://localhost:8080/csv/upload
 	// port 的设定在最后一行
 	router.Use(CORS()).POST("/csv/upload", func(c *gin.Context) {
@@ -55,7 +55,7 @@ func main() {
 		}
 		defer file.Close()
 		// transfer file to data
-		data, err := ioutil.ReadAll(bufio.NewReader(file))
+		data, err := io.ReadAll(bufio.NewReader(file))
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"message": fmt.Sprintf("err: %s", err),

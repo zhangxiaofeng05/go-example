@@ -9,6 +9,7 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.4.3
 	github.com/golang-migrate/migrate/v4 v4.15.2
 	github.com/gorilla/websocket v1.5.0
+	github.com/lib/pq v1.10.0
 	github.com/mattn/go-sqlite3 v1.14.10
 	github.com/sony/gobreaker v0.5.0
 )

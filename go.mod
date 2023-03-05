@@ -14,6 +14,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.10
 	github.com/redis/go-redis/v9 v9.0.2
 	github.com/sony/gobreaker v0.5.0
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 )
 
 require (
